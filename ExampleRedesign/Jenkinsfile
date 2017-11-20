@@ -1,0 +1,16 @@
+pipeline {
+    agent {
+        docker {
+            image 'registry.docker-cn.com/microsoft/dotnet'
+            args '-p 5001:5001'
+        }
+    }
+    stages {
+        stage('Build'){
+            steps{
+                sh 'cp'
+                sh 'dotnet run'
+            }
+        }
+    }
+}
