@@ -9,14 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''cd ExampleRedesign
-dotnet publish
-
-cd ExampleRedesign/bin/debug/netcoreapp2.0/
-
-dotnet ExampleRedesign.dll
-
-'''
+        sh 'cd ExampleRedesign'
       }
     }
   }
