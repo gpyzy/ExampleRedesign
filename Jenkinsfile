@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'registry.docker-cn.com/microsoft/dotnet:2.0.3-runtime'
       args '-p 5000'
+      image 'registry.docker-cn.com/microsoft/dotnet:latest'
     }
     
   }
