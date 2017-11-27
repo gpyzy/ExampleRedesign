@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd ExampleRedesign'
+        sh '''cd ExampleRedesign
+
+ls -la'''
       }
     }
   }
