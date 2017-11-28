@@ -11,7 +11,9 @@ pipeline {
       steps {
         sh '''cd ExampleRedesign
 
-ls -la'''
+ls -la
+
+dotnet run'''
       }
     }
   }
