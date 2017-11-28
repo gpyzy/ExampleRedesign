@@ -1,0 +1,9 @@
+FROM registry.docker-cn.com/microsoft/dotnet:latest
+EXPOSE 5001
+
+WORKDIR /var/exampleredesign_home/
+COPY ExampleRedesign/bin/Debug/netcoreapp2.0/ ./app/
+
+WORKDIR app/publish
+
+CMD dotnet ExampleRedesign.dll
