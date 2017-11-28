@@ -7,6 +7,4 @@ services:
     ports:
     - 5000
     user: root
-    entrypoint: entrypoint.sh
-
-          
+    command: start.sh
