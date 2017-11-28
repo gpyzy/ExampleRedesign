@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'rancher compose up -d'
+        sh 'rancher-compose up -d'
       }
     }
   }
