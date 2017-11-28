@@ -7,6 +7,6 @@ services:
     ports:
     - 5000
     user: root
-    command: rancher-compose up -d
-    
+    entrypoint: entrypoint.sh
+
           
