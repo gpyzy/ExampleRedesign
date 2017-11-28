@@ -1,19 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      args '-p 5000'
-      image 'registry.docker-cn.com/microsoft/dotnet:latest'
-    }
-    
-  }
+  agent none
   stages {
     stage('Build') {
       steps {
-        sh '''cd ExampleRedesign
-
-ls -la
-
-dotnet run'''
+        sh 'rancher compose up -d'
       }
     }
   }
