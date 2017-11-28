@@ -1,9 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      filename 'dockerfile'
+    }
+    
+  }
   stages {
-    stage('Build') {
+    stage('build') {
       steps {
-        sh 'rancher-compose up -d'
+        sh 'docker build -t exampleRedesign:latest'
+      }
+    }
+    stage('run') {
+      steps {
+        sh 'docker run -it exampleRedesign'
       }
     }
   }
