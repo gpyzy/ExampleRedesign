@@ -1,0 +1,12 @@
+version: '2'
+services:
+  exampleRedesign:
+    image: microsoft/dotnet:latest
+    stdin_open: true
+    tty: true
+    ports:
+    - 5000
+    user: root
+    command: rancher-compose up -d
+    
+          
