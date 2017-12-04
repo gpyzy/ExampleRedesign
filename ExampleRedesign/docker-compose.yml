@@ -1,10 +1,9 @@
 version: '2'
 services:
-  exampleRedesign:
-    image: microsoft/dotnet:latest
+  aspnetapp:
+    image: aspnetapp
     stdin_open: true
     tty: true
     ports:
-    - 5000
+    - 8001:80
     user: root
-    command: start.sh

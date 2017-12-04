@@ -1,4 +1,4 @@
 version: '2'
 services:
-  exampleRedesign:
+  aspnetapp:
     start_on_create: true
